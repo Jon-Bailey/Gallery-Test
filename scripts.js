@@ -1,5 +1,7 @@
 const listItem = document.querySelectorAll('li');
 const image = document.querySelectorAll('img');
+const header = document.getElementById('header-text');
+const subtext = document.getElementById('subtext');
 
 listItem.forEach((li, i) => {
     li.addEventListener('mouseenter', () => {
@@ -10,4 +12,4 @@ listItem.forEach((li, i) => {
         image[i].style.visibility = 'hidden';
         li.classList.remove('selected');
     })
-})
+});

@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: helvetica;
+  font-family: 'Archivo', sans-serif;
+  font-size:13px;
   color: darkslategray;
 }
 
@@ -13,6 +17,17 @@ body {
 .header {
   border-bottom: 1px solid darkslategray;
   height: 100px;
+  color:darkslategray;
+  padding:20px;
+}
+
+.header h1 {
+  font-weight:300;
+  font-size:13px;
+}
+
+.header h2 {
+  font-weight:300;
 }
 
 .container {
@@ -51,10 +66,49 @@ img {
   height: auto;
   position: absolute;
   object-fit: contain;
-  border-radius: 27% 73% 37% 63% / 56% 38% 62% 44%;
+  /*border-radius: 27% 73% 37% 63% / 56% 38% 62% 44%;*/
 }
 
 .selected {
   background-color: darkslategray;
   color: white;
+}
+
+
+@media (max-width:800px) {
+
+  .header {
+    width:100vw;
+  }
+
+  .container {
+    display:block;
+    max-height:1200px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .list {
+    width:100vw;
+    height:auto;
+    display:flex;
+  }
+
+  .list ul {
+    width:100%;
+    border-right: 1px solid darkslategray;
+  }
+
+  .images {
+    height:fit-content;
+    width:fit-content;
+    margin:auto;
+    max-width:300px;
+    align-items:center;
+  }
+
+  img {
+    max-width:300px;
+    object-fit:cover;
+  }
 }
